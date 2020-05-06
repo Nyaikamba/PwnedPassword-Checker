@@ -26,7 +26,15 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Font" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="Password-Checker" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="Password-Checker" />
+      </console-settings>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -48,6 +56,10 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
+    <state x="549" y="154" key="FileChooserDialogImpl" timestamp="1588270736593">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588270736593" />
     <state x="626" y="310" key="Github.ShareDialog" timestamp="1588072456780">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -56,9 +68,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="575" y="117" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1588072467385" />
-    <state x="277" y="57" key="SettingsEditor" timestamp="1588075072072">
+    <state x="277" y="57" key="SettingsEditor" timestamp="1588271371482">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1588075072072" />
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1588271371482" />
   </component>
 </project>
