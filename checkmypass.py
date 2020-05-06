@@ -1,3 +1,5 @@
+#Libraries required to run
+
 import requests
 import hashlib
 import sys
@@ -10,13 +12,13 @@ def request_api_data(head_check):
     leaks = requests.get(url)
 
     if leaks.status_code != 200:
-        raise RuntimeError(f' Error fetching: {leaks}, check api and try again')
+        raise RuntimeError(f' Error fetching: {leaks}, check api functions and try again')
 
     # return leaks from query run
     return leaks
 
 
-# Password leak checker
+# Compare results received from API
 
 def leak_check(hashes, tail_check):
     # hashes are the responses received from the api data check
@@ -31,19 +33,17 @@ def leak_check(hashes, tail_check):
 # Convert password to sha1 to check against API data
 
 def pwned_pass_check(password):
-    # convert to Sha1
+    # convert to Sha1 for comparison
     sha1password = (hashlib.sha1(password.encode('utf-8')).hexdigest().upper())
-    # split into head to compare with api and tail to compare with results
 
+    # split into head to grab api leaks and tail to compare with results returned from leak
     head, tail = sha1password[:5], sha1password[5:]
 
-    # function call - querry character is the head ie first five letters
     response = request_api_data(head)
-
     return leak_check(response, tail)
 
 
-# main function accepts arguments from terminal
+# main function accepts arguments from terminal. Pass in as many passwords as you may want
 
 def main(args):
     for password in args:
@@ -59,4 +59,11 @@ def main(args):
 # can take in multiple passwords
 
 if __name__ == '__main__':
+    # ensure at least one argument is passed, if not exit
+    try:
+        argv1 = sys.argv[1]
+    except IndexError:
+        print('No passwords to check - exiting screen')
+        sys.exit()
+
     sys.exit(main(sys.argv[1:]))
